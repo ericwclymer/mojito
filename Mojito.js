@@ -207,7 +207,11 @@ function setupModules() {
 
 }
 (function () {
-    if (window.location.href.indexOf('overview.event') == -1) {
+	var url = window.location.href;
+    if (url.indexOf('overview.event') == -1) {
+		if(url.indexOf('transaction.event') !== -1 && OPTIONS.transactionDateRange){
+			TransactionDateRange.initialize();
+		}
         //console.log('Mojito exit');
         return;
     }

@@ -8,6 +8,7 @@ var OPTIONS = {};
 function save_options() {
     OPTIONS.hideZeroBalance = document.getElementById('cbZero').checked;
     OPTIONS.disableTimeout = document.getElementById('cbTimeout').checked;
+	OPTIONS.transactionDateRange = document.getElementById('module-transactiondatefilter').checked;
     var el = document.getElementById('options');
     OPTIONS.layout=[];
     document.querySelectorAll("input[id^='module']").forEach(function (x) {
